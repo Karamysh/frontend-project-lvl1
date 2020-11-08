@@ -3,4 +3,4 @@
 [![Node CI](https://github.com/Bitvinus/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/Bitvinus/frontend-project-lvl1/actions)
 
 # Game: "Even"
-[![asciicast](https://asciinema.org/a/yRV2Plc7fQQkWPZ5EKfeddjvG.svg)](https://asciinema.org/a/yRV2Plc7fQQkWPZ5EKfeddjvG)
+[![asciicast](https://asciinema.org/a/w1wbJ2HzB0RJmz0WiM1eW6AMa.svg)](https://asciinema.org/a/w1wbJ2HzB0RJmz0WiM1eW6AMa)
