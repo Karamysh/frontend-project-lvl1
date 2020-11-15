@@ -4,3 +4,7 @@
 
 # Game: "Even"
 [![asciicast](https://asciinema.org/a/w1wbJ2HzB0RJmz0WiM1eW6AMa.svg)](https://asciinema.org/a/w1wbJ2HzB0RJmz0WiM1eW6AMa)
+
+
+# Game: "Calc"
+[![asciicast](https://asciinema.org/a/KqAg5X4p7KewUKQnaAjEBeahs.svg)](https://asciinema.org/a/KqAg5X4p7KewUKQnaAjEBeahs)
