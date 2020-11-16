@@ -8,3 +8,6 @@
 
 # Game: "Calc"
 [![asciicast](https://asciinema.org/a/KqAg5X4p7KewUKQnaAjEBeahs.svg)](https://asciinema.org/a/KqAg5X4p7KewUKQnaAjEBeahs)
+
+# Game: "Gcd"
+[![asciicast](https://asciinema.org/a/TNqtckQGExDb5gmbJdeHZWRHX.svg)](https://asciinema.org/a/TNqtckQGExDb5gmbJdeHZWRHX)
