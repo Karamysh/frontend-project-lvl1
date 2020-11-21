@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/extensions
-import getRandom from '../utilities/getRand.js';
+import getRandomNumber from '../utilities/getRand.js';
 // eslint-disable-next-line import/extensions
 import launchGame from '../index.js';
 
@@ -18,7 +18,7 @@ const isPrime = (number) => {
 };
 
 const getGameData = () => {
-  const question = getRandom(0, 10);
+  const question = getRandomNumber(0, 10);
 
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [correctAnswer, String(question)];

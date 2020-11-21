@@ -1,15 +1,15 @@
 // eslint-disable-next-line import/extensions
-import getRandom from '../utilities/getRand.js';
+import getRandomNumber from '../utilities/getRand.js';
 // eslint-disable-next-line import/extensions
 import launchGame from '../index.js';
 
 const task = 'What number is missing in the progression?';
 
 const getGameData = () => {
-  const progLength = getRandom(5, 10);
-  const progStep = getRandom(1, 9);
-  const progStartAt = getRandom(1, 100);
-  const missingIndex = getRandom(0, progLength);
+  const progLength = getRandomNumber(5, 10);
+  const progStep = getRandomNumber(1, 9);
+  const progStartAt = getRandomNumber(1, 100);
+  const missingIndex = getRandomNumber(0, progLength);
   const resultArray = [];
   for (let i = 1; i <= progLength; i += 1) {
     resultArray.push(progStartAt + (progStep * i));

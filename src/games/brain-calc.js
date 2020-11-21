@@ -1,13 +1,13 @@
 // eslint-disable-next-line import/extensions
-import getRandom from '../utilities/getRand.js';
-// eslint-disable-next-line import/extensions
 import launchGame from '../index.js';
+// eslint-disable-next-line import/extensions
+import getRandomNumber from '../utilities/getRand.js';
 
 const task = 'What is the result of the expression?';
 
 const getRandomMathSign = () => {
   const operators = ['+', '-', '*'];
-  const randomIndex = getRandom(0, 2);
+  const randomIndex = getRandomNumber(0, 2);
   return operators[randomIndex];
 };
 
@@ -30,8 +30,8 @@ const calculate = (firstNumber, secondNumber, operator) => {
 };
 
 const getGameData = () => {
-  const firstNumber = getRandom(0, 10);
-  const secondNumber = getRandom(0, 10);
+  const firstNumber = getRandomNumber(0, 10);
+  const secondNumber = getRandomNumber(0, 10);
   const operator = getRandomMathSign();
 
   const question = `${firstNumber} ${operator} ${secondNumber}`;
