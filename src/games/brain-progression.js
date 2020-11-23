@@ -2,22 +2,26 @@ import getRandomNumber from '../utilities/utils.js';
 import launchGame from '../index.js';
 
 const TASK = 'What number is missing in the progression?';
-const MIN = {
-  START: 1,
-  LENGTH: 5,
-  STEP: 1,
-};
-const MAX = {
-  START: 100,
-  LENGTH: 10,
-  STEP: 9,
+const PROG_VALUES = {
+  STEP: {
+    MIN: 1,
+    MAX: 9,
+  },
+  START: {
+    MIN: 1,
+    MAX: 100,
+  },
+  LENGTH: {
+    MIN: 5,
+    MAX: 10,
+  },
 };
 
-const PROGRESSION_LENGTH = getRandomNumber(MIN.LENGTH, MAX.LENGTH);
+const PROGRESSION_LENGTH = getRandomNumber(PROG_VALUES.LENGTH.MIN, PROG_VALUES.LENGTH.MAX);
 
 const progresArray = () => {
-  const progStep = getRandomNumber(MIN.STEP, MAX.STEP);
-  const progStartAt = getRandomNumber(MIN.START, MAX.START);
+  const progStep = getRandomNumber(PROG_VALUES.STEP.MIN, PROG_VALUES.STEP.MAX);
+  const progStartAt = getRandomNumber(PROG_VALUES.START.MIN, PROG_VALUES.START.MAX);
   const resultArray = [];
   for (let i = 1; i <= PROGRESSION_LENGTH; i += 1) {
     resultArray.push(progStartAt + (progStep * i));
