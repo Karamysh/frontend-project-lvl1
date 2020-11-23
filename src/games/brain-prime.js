@@ -1,9 +1,9 @@
-// eslint-disable-next-line import/extensions
-import getRandomNumber from '../utilities/getRand.js';
-// eslint-disable-next-line import/extensions
+import getRandomNumber from '../utilities/utils.js';
 import launchGame from '../index.js';
 
-const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const MIN_NUMBER = 0;
+const MAX_NUMBER = 10;
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -18,12 +18,12 @@ const isPrime = (number) => {
 };
 
 const getGameData = () => {
-  const question = getRandomNumber(0, 10);
+  const question = getRandomNumber(MIN_NUMBER, MAX_NUMBER);
 
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [correctAnswer, String(question)];
 };
 
-const launchGameEven = () => launchGame(getGameData, task);
+const launchGameEven = () => launchGame(getGameData, TASK);
 
 export default launchGameEven;

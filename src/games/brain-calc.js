@@ -1,14 +1,13 @@
-// eslint-disable-next-line import/extensions
 import launchGame from '../index.js';
-// eslint-disable-next-line import/extensions
-import getRandomNumber from '../utilities/getRand.js';
+import getRandomNumber from '../utilities/utils.js';
 
-const task = 'What is the result of the expression?';
+const TASK = 'What is the result of the expression?';
+
+const OPERATORS = ['+', '-', '*'];
 
 const getRandomMathSign = () => {
-  const operators = ['+', '-', '*'];
-  const randomIndex = getRandomNumber(0, 2);
-  return operators[randomIndex];
+  const randomIndex = getRandomNumber(0, OPERATORS.length - 1);
+  return OPERATORS[randomIndex];
 };
 
 const calculate = (firstNumber, secondNumber, operator) => {
@@ -39,6 +38,6 @@ const getGameData = () => {
   return [correctAnswer, question];
 };
 
-const launchGameEven = () => launchGame(getGameData, task);
+const launchGameEven = () => launchGame(getGameData, TASK);
 
 export default launchGameEven;

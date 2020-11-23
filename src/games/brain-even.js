@@ -1,11 +1,9 @@
-// eslint-disable-next-line import/extensions
-import getRandomNumber from '../utilities/getRand.js';
-// eslint-disable-next-line import/extensions
+import getRandomNumber from '../utilities/utils.js';
 import launchGame from '../index.js';
 
-const task = 'Answer "yes" if the number is even, otherwise answer "no".';
+const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (n) => n % 2 === 0;
+const isEven = (number) => number % 2 === 0;
 
 const getGameData = () => {
   const question = getRandomNumber();
@@ -14,6 +12,6 @@ const getGameData = () => {
   return [correctAnswer, String(question)];
 };
 
-const launchGameEven = () => launchGame(getGameData, task);
+const launchGameEven = () => launchGame(getGameData, TASK);
 
 export default launchGameEven;

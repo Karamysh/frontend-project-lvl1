@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// eslint-disable-next-line import/extensions
-import gameStart from '../src/games/brain-prime.js';
+import startingGame from '../src/games/brain-prime.js';
 
-gameStart();
+startingGame();
