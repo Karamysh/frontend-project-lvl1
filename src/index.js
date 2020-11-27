@@ -17,15 +17,11 @@ const launchGame = async (getGameData, task) => {
       roundNumber += 1;
       console.log('Correct!');
     } else {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
-      break;
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".\nLet's try again, ${name}!`);
+      return;
     }
   }
-  if (roundNumber === numberOfRounds) {
-    console.log(`Congratulations, ${name}!`);
-  } else {
-    console.log(`Let's try again, ${name}!)`);
-  }
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default launchGame;

@@ -1,5 +1,5 @@
 import launchGame from '../index.js';
-import getRandomNumber from '../utilities/utils.js';
+import getRandomNumber from '../utils.js';
 
 const TASK = 'What is the result of the expression?';
 
@@ -11,7 +11,7 @@ const getRandomMathSign = () => {
 };
 
 const calculate = (firstNumber, secondNumber, operator) => {
-  let result = 0;
+  let result;
   switch (operator) {
     case '+':
       result = firstNumber + secondNumber;
