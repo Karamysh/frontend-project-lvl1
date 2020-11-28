@@ -19,9 +19,7 @@ const PROG_VALUES = {
 
 const PROGRESSION_LENGTH = getRandomNumber(PROG_VALUES.LENGTH.MIN, PROG_VALUES.LENGTH.MAX);
 
-const getProgression = () => {
-  const progStep = getRandomNumber(PROG_VALUES.STEP.MIN, PROG_VALUES.STEP.MAX);
-  const progStartAt = getRandomNumber(PROG_VALUES.START.MIN, PROG_VALUES.START.MAX);
+const getProgression = (progStartAt, progStep) => {
   const result = [];
   for (let i = 1; i <= PROGRESSION_LENGTH; i += 1) {
     result.push(progStartAt + (progStep * i));
@@ -30,7 +28,9 @@ const getProgression = () => {
 };
 
 const getGameData = () => {
-  const progression = getProgression();
+  const progStep = getRandomNumber(PROG_VALUES.STEP.MIN, PROG_VALUES.STEP.MAX);
+  const progStartAt = getRandomNumber(PROG_VALUES.START.MIN, PROG_VALUES.START.MAX);
+  const progression = getProgression(progStartAt, progStep);
   const missingIndex = getRandomNumber(0, PROGRESSION_LENGTH);
   const correctAnswer = progression[missingIndex];
   progression[missingIndex] = '..';
