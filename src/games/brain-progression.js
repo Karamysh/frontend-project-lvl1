@@ -30,7 +30,7 @@ const getGameData = () => {
   const progStep = getRandomNumber(PROG_VALUES.STEP.MIN, PROG_VALUES.STEP.MAX);
   const progStartAt = getRandomNumber(PROG_VALUES.START.MIN, PROG_VALUES.START.MAX);
   const progression = getProgression(progStartAt, progStep, progLength);
-  const missingIndex = getRandomNumber(0, progLength);
+  const missingIndex = getRandomNumber(0, progLength - 1);
   const correctAnswer = progression[missingIndex];
   progression[missingIndex] = '..';
   const question = progression.join(' ');
